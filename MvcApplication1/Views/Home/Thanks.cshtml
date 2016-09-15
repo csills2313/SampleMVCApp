@@ -1,0 +1,42 @@
+﻿@model MvcApplication1.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    @{
+try {
+WebMail.SmtpServer = "smtp.gmail.com";
+WebMail.SmtpPort = 587;
+WebMail.EnableSsl = true;
+WebMail.UserName = "csills2313@gmail.com";
+WebMail.Password = "moodyblue";
+WebMail.From = "register@aol.com";
+WebMail.Send("csills2313@gmail.com", "RSVP Notification",
+Model.Name + "<br> " + Model.Email + "<br> " + Model.Phone + "<br>" + "is " + ((Model.WillAttend ?? false) ? "" : "not")
++ "attending");
+} catch (Exception) {
+@:<b>Sorry - we couldn't send the email to confirm your RSVP.</b>
+}
+}
+
+    <div>
+        <h1>Thank you, @Model.Name!</h1>
+        <p>Your email is @Model.Email</p>
+        <p>Your telephone number is @Model.Phone</p>
+@if (Model.WillAttend == true) {
+@:It's great that you're coming. The drinks are already in the fridge!
+} else {
+@:Sorry to hear that you can't make it, but thanks for letting us know.
+}
+    </div>
+</body>
+</html>

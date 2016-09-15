@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinCENContextModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FinCENContextEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="FinCENContextModel.C__MigrationHistory" />
+    <EntitySet Name="AffectedAccounts" EntityType="FinCENContextModel.AffectedAccount" />
+    <EntitySet Name="BranchInstitutions" EntityType="FinCENContextModel.BranchInstitution" />
+    <EntitySet Name="ColumnChangeEntries" EntityType="FinCENContextModel.ColumnChangeEntry" />
+    <EntitySet Name="CommodityTypes" EntityType="FinCENContextModel.CommodityType" />
+    <EntitySet Name="CountryCodes" EntityType="FinCENContextModel.CountryCode" />
+    <EntitySet Name="CUSIPNumbers" EntityType="FinCENContextModel.CUSIPNumber" />
+    <EntitySet Name="FilingInstitutions" EntityType="FinCENContextModel.FilingInstitution" />
+    <EntitySet Name="FilingInstitutionFilings" EntityType="FinCENContextModel.FilingInstitutionFiling" />
+    <EntitySet Name="FinancialInstitutions" EntityType="FinCENContextModel.FinancialInstitution" />
+    <EntitySet Name="FinancialInstitutionFilings" EntityType="FinCENContextModel.FinancialInstitutionFiling" />
+    <EntitySet Name="FinCENFiles" EntityType="FinCENContextModel.FinCENFile" />
+    <EntitySet Name="IPAddresses" EntityType="FinCENContextModel.IPAddress" />
+    <EntitySet Name="NAICSCodes" EntityType="FinCENContextModel.NAICSCode" />
+    <EntitySet Name="NarrativeDescriptions" EntityType="FinCENContextModel.NarrativeDescription" />
+    <EntitySet Name="PostalCodes" EntityType="FinCENContextModel.PostalCode" />
+    <EntitySet Name="ProductDescriptions" EntityType="FinCENContextModel.ProductDescription" />
+    <EntitySet Name="RecordChangeEntries" EntityType="FinCENContextModel.RecordChangeEntry" />
+    <EntitySet Name="RevisionHistories" EntityType="FinCENContextModel.RevisionHistory" />
+    <EntitySet Name="SARSubjects" EntityType="FinCENContextModel.SARSubject" />
+    <EntitySet Name="StateCodes" EntityType="FinCENContextModel.StateCode" />
+    <EntitySet Name="SubjectAddresses" EntityType="FinCENContextModel.SubjectAddress" />
+    <EntitySet Name="SubjectAlternateNames" EntityType="FinCENContextModel.SubjectAlternateName" />
+    <EntitySet Name="SubjectEmails" EntityType="FinCENContextModel.SubjectEmail" />
+    <EntitySet Name="SubjectIdentifications" EntityType="FinCENContextModel.SubjectIdentification" />
+    <EntitySet Name="SubjectRelationships" EntityType="FinCENContextModel.SubjectRelationship" />
+    <EntitySet Name="SubjectTelephones" EntityType="FinCENContextModel.SubjectTelephone" />
+    <EntitySet Name="SubjectWebsites" EntityType="FinCENContextModel.SubjectWebsite" />
+    <EntitySet Name="SuspiciousActivities" EntityType="FinCENContextModel.SuspiciousActivity" />
+    <EntitySet Name="TradingMarkets" EntityType="FinCENContextModel.TradingMarket" />
+    <EntitySet Name="Transmitters" EntityType="FinCENContextModel.Transmitter" />
+    <AssociationSet Name="FK_dbo_AffectedAccount_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_AffectedAccount_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="AffectedAccount" EntitySet="AffectedAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_BranchInstitution_dbo_CountryCode_CountryCodeID" Association="FinCENContextModel.FK_dbo_BranchInstitution_dbo_CountryCode_CountryCodeID">
+      <End Role="CountryCode" EntitySet="CountryCodes" />
+      <End Role="BranchInstitution" EntitySet="BranchInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_BranchInstitution_dbo_FinancialInstitutionFiling_FinancialInstitutionFiling_FinancialInstitutionFilingID" Association="FinCENContextModel.FK_dbo_BranchInstitution_dbo_FinancialInstitutionFiling_FinancialInstitutionFiling_FinancialInstitutionFilingID">
+      <End Role="FinancialInstitutionFiling" EntitySet="FinancialInstitutionFilings" />
+      <End Role="BranchInstitution" EntitySet="BranchInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_BranchInstitution_dbo_PostalCode_PostalCodeID" Association="FinCENContextModel.FK_dbo_BranchInstitution_dbo_PostalCode_PostalCodeID">
+      <End Role="PostalCode" EntitySet="PostalCodes" />
+      <End Role="BranchInstitution" EntitySet="BranchInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_BranchInstitution_dbo_StateCode_StateCodeID" Association="FinCENContextModel.FK_dbo_BranchInstitution_dbo_StateCode_StateCodeID">
+      <End Role="StateCode" EntitySet="StateCodes" />
+      <End Role="BranchInstitution" EntitySet="BranchInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ColumnChangeEntries_dbo_RecordChangeEntries_RecordChangeEntryID" Association="FinCENContextModel.FK_dbo_ColumnChangeEntries_dbo_RecordChangeEntries_RecordChangeEntryID">
+      <End Role="RecordChangeEntries" EntitySet="RecordChangeEntries" />
+      <End Role="ColumnChangeEntries" EntitySet="ColumnChangeEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_CommodityType_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_CommodityType_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="CommodityType" EntitySet="CommodityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FilingInstitution_dbo_CountryCode_CountryCodeID" Association="FinCENContextModel.FK_dbo_FilingInstitution_dbo_CountryCode_CountryCodeID">
+      <End Role="CountryCode" EntitySet="CountryCodes" />
+      <End Role="FilingInstitution" EntitySet="FilingInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FinancialInstitution_dbo_CountryCode_CountryCodeID" Association="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_CountryCode_CountryCodeID">
+      <End Role="CountryCode" EntitySet="CountryCodes" />
+      <End Role="FinancialInstitution" EntitySet="FinancialInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectAddress_dbo_CountryCode_CountryCodeID" Association="FinCENContextModel.FK_dbo_SubjectAddress_dbo_CountryCode_CountryCodeID">
+      <End Role="CountryCode" EntitySet="CountryCodes" />
+      <End Role="SubjectAddress" EntitySet="SubjectAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectIdentification_dbo_CountryCode_IssuingCountryCodeID" Association="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_CountryCode_IssuingCountryCodeID">
+      <End Role="CountryCode" EntitySet="CountryCodes" />
+      <End Role="SubjectIdentification" EntitySet="SubjectIdentifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Transmitter_dbo_CountryCode_CountryCodeID" Association="FinCENContextModel.FK_dbo_Transmitter_dbo_CountryCode_CountryCodeID">
+      <End Role="CountryCode" EntitySet="CountryCodes" />
+      <End Role="Transmitter" EntitySet="Transmitters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_CUSIPNumber_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_CUSIPNumber_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="CUSIPNumber" EntitySet="CUSIPNumbers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FilingInstitution_dbo_PostalCode_PostalCodeID" Association="FinCENContextModel.FK_dbo_FilingInstitution_dbo_PostalCode_PostalCodeID">
+      <End Role="PostalCode" EntitySet="PostalCodes" />
+      <End Role="FilingInstitution" EntitySet="FilingInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FilingInstitution_dbo_StateCode_StateCodeID" Association="FinCENContextModel.FK_dbo_FilingInstitution_dbo_StateCode_StateCodeID">
+      <End Role="StateCode" EntitySet="StateCodes" />
+      <End Role="FilingInstitution" EntitySet="FilingInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FilingInstitutionFiling_dbo_FilingInstitution_FilingInstitutionID" Association="FinCENContextModel.FK_dbo_FilingInstitutionFiling_dbo_FilingInstitution_FilingInstitutionID">
+      <End Role="FilingInstitution" EntitySet="FilingInstitutions" />
+      <End Role="FilingInstitutionFiling" EntitySet="FilingInstitutionFilings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FilingInstitutionFiling_dbo_FinCENFile_FinCENFile_FinCENFileID" Association="FinCENContextModel.FK_dbo_FilingInstitutionFiling_dbo_FinCENFile_FinCENFile_FinCENFileID">
+      <End Role="FinCENFile" EntitySet="FinCENFiles" />
+      <End Role="FilingInstitutionFiling" EntitySet="FilingInstitutionFilings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FinancialInstitutionFiling_dbo_FilingInstitutionFiling_FilingInstitutionFiling_FilingInstitutionFilingID" Association="FinCENContextModel.FK_dbo_FinancialInstitutionFiling_dbo_FilingInstitutionFiling_FilingInstitutionFiling_FilingInstitutionFilingID">
+      <End Role="FilingInstitutionFiling" EntitySet="FilingInstitutionFilings" />
+      <End Role="FinancialInstitutionFiling" EntitySet="FinancialInstitutionFilings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FinancialInstitution_dbo_PostalCode_PostalCodeID" Association="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_PostalCode_PostalCodeID">
+      <End Role="PostalCode" EntitySet="PostalCodes" />
+      <End Role="FinancialInstitution" EntitySet="FinancialInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FinancialInstitution_dbo_StateCode_StateCodeID" Association="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_StateCode_StateCodeID">
+      <End Role="StateCode" EntitySet="StateCodes" />
+      <End Role="FinancialInstitution" EntitySet="FinancialInstitutions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FinancialInstitutionFiling_dbo_FinancialInstitution_FinancialInstitutionID" Association="FinCENContextModel.FK_dbo_FinancialInstitutionFiling_dbo_FinancialInstitution_FinancialInstitutionID">
+      <End Role="FinancialInstitution" EntitySet="FinancialInstitutions" />
+      <End Role="FinancialInstitutionFiling" EntitySet="FinancialInstitutionFilings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_FinCENFile_dbo_Transmitter_TransmitterID" Association="FinCENContextModel.FK_dbo_FinCENFile_dbo_Transmitter_TransmitterID">
+      <End Role="Transmitter" EntitySet="Transmitters" />
+      <End Role="FinCENFile" EntitySet="FinCENFiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_IPAddress_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_IPAddress_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="IPAddress" EntitySet="IPAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SARSubject_dbo_NAICSCode_NAICSCodeID" Association="FinCENContextModel.FK_dbo_SARSubject_dbo_NAICSCode_NAICSCodeID">
+      <End Role="NAICSCode" EntitySet="NAICSCodes" />
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_NarrativeDescription_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_NarrativeDescription_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="NarrativeDescription" EntitySet="NarrativeDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectAddress_dbo_PostalCode_PostalCodeID" Association="FinCENContextModel.FK_dbo_SubjectAddress_dbo_PostalCode_PostalCodeID">
+      <End Role="PostalCode" EntitySet="PostalCodes" />
+      <End Role="SubjectAddress" EntitySet="SubjectAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Transmitter_dbo_PostalCode_PostalCodeID" Association="FinCENContextModel.FK_dbo_Transmitter_dbo_PostalCode_PostalCodeID">
+      <End Role="PostalCode" EntitySet="PostalCodes" />
+      <End Role="Transmitter" EntitySet="Transmitters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ProductDescription_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_ProductDescription_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="ProductDescription" EntitySet="ProductDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_RecordChangeEntries_dbo_RevisionHistories_RevisionHistorieID" Association="FinCENContextModel.FK_dbo_RecordChangeEntries_dbo_RevisionHistories_RevisionHistorieID">
+      <End Role="RevisionHistories" EntitySet="RevisionHistories" />
+      <End Role="RecordChangeEntries" EntitySet="RecordChangeEntries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SARSubject_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_SARSubject_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectAddress_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectAddress_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectAddress" EntitySet="SubjectAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectAlternateName_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectAlternateName_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectAlternateName" EntitySet="SubjectAlternateNames" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectEmail_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectEmail_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectEmail" EntitySet="SubjectEmails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectIdentification_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectIdentification" EntitySet="SubjectIdentifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectRelationship_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectRelationship_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectRelationship" EntitySet="SubjectRelationships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectTelephone_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectTelephone_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectTelephone" EntitySet="SubjectTelephones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectWebsite_dbo_SARSubject_SARSubjectID" Association="FinCENContextModel.FK_dbo_SubjectWebsite_dbo_SARSubject_SARSubjectID">
+      <End Role="SARSubject" EntitySet="SARSubjects" />
+      <End Role="SubjectWebsite" EntitySet="SubjectWebsites" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectAddress_dbo_StateCode_StateCodeID" Association="FinCENContextModel.FK_dbo_SubjectAddress_dbo_StateCode_StateCodeID">
+      <End Role="StateCode" EntitySet="StateCodes" />
+      <End Role="SubjectAddress" EntitySet="SubjectAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SubjectIdentification_dbo_StateCode_IssuingStateCodeID" Association="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_StateCode_IssuingStateCodeID">
+      <End Role="StateCode" EntitySet="StateCodes" />
+      <End Role="SubjectIdentification" EntitySet="SubjectIdentifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Transmitter_dbo_StateCode_StateCodeID" Association="FinCENContextModel.FK_dbo_Transmitter_dbo_StateCode_StateCodeID">
+      <End Role="StateCode" EntitySet="StateCodes" />
+      <End Role="Transmitter" EntitySet="Transmitters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_SuspiciousActivity_dbo_SuspiciousActivity_PriorReportID" Association="FinCENContextModel.FK_dbo_SuspiciousActivity_dbo_SuspiciousActivity_PriorReportID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="SuspiciousActivity1" EntitySet="SuspiciousActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_TradingMarket_dbo_SuspiciousActivity_SuspiciousActivityID" Association="FinCENContextModel.FK_dbo_TradingMarket_dbo_SuspiciousActivity_SuspiciousActivityID">
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+      <End Role="TradingMarket" EntitySet="TradingMarkets" />
+    </AssociationSet>
+    <AssociationSet Name="FinancialInstitutionFilingSuspiciousActivities" Association="FinCENContextModel.FinancialInstitutionFilingSuspiciousActivities">
+      <End Role="FinancialInstitutionFiling" EntitySet="FinancialInstitutionFilings" />
+      <End Role="SuspiciousActivity" EntitySet="SuspiciousActivities" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AffectedAccount">
+    <Key>
+      <PropertyRef Name="AffectedAccountID" />
+    </Key>
+    <Property Name="AffectedAccountID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="IsNonUSInstitution" Type="Boolean" Nullable="false" />
+    <Property Name="TINOfHoldingInstitution" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="TINOfSubjectHeldByInstitution" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="IsAccountClosed" Type="Boolean" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_AffectedAccount_dbo_SARSubject_SARSubjectID" FromRole="AffectedAccount" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="BranchInstitution">
+    <Key>
+      <PropertyRef Name="BranchInstitutionID" />
+    </Key>
+    <Property Name="BranchInstitutionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="StreetAddress" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RSSDNumber" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="StateCodeID" Type="Int32" Nullable="false" />
+    <Property Name="PostalCodeID" Type="Int32" Nullable="false" />
+    <Property Name="CountryCodeID" Type="Int32" Nullable="false" />
+    <Property Name="FinancialInstitutionFiling_FinancialInstitutionFilingID" Type="Int32" />
+    <Property Name="BranchTransactionRole" Type="Int32" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CountryCode" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_CountryCode_CountryCodeID" FromRole="BranchInstitution" ToRole="CountryCode" />
+    <NavigationProperty Name="FinancialInstitutionFiling" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_FinancialInstitutionFiling_FinancialInstitutionFiling_FinancialInstitutionFilingID" FromRole="BranchInstitution" ToRole="FinancialInstitutionFiling" />
+    <NavigationProperty Name="PostalCode" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_PostalCode_PostalCodeID" FromRole="BranchInstitution" ToRole="PostalCode" />
+    <NavigationProperty Name="StateCode" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_StateCode_StateCodeID" FromRole="BranchInstitution" ToRole="StateCode" />
+  </EntityType>
+  <EntityType Name="ColumnChangeEntry">
+    <Key>
+      <PropertyRef Name="ColumnChangeEntryID" />
+    </Key>
+    <Property Name="ColumnChangeEntryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RecordChangeEntryID" Type="Int32" Nullable="false" />
+    <Property Name="ColumnName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="OldValue" Type="String" MaxLength="850" Unicode="true" FixedLength="false" />
+    <Property Name="NewValue" Type="String" MaxLength="850" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="RecordChangeEntry" Relationship="FinCENContextModel.FK_dbo_ColumnChangeEntries_dbo_RecordChangeEntries_RecordChangeEntryID" FromRole="ColumnChangeEntries" ToRole="RecordChangeEntries" />
+  </EntityType>
+  <EntityType Name="CommodityType">
+    <Key>
+      <PropertyRef Name="CommodityTypeID" />
+    </Key>
+    <Property Name="CommodityTypeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" />
+    <Property Name="CommodityTypeName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_CommodityType_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="CommodityType" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="CountryCode">
+    <Key>
+      <PropertyRef Name="CountryCodeID" />
+    </Key>
+    <Property Name="CountryCodeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ISOCode" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="CountryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BranchInstitutions" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_CountryCode_CountryCodeID" FromRole="CountryCode" ToRole="BranchInstitution" />
+    <NavigationProperty Name="FilingInstitutions" Relationship="FinCENContextModel.FK_dbo_FilingInstitution_dbo_CountryCode_CountryCodeID" FromRole="CountryCode" ToRole="FilingInstitution" />
+    <NavigationProperty Name="FinancialInstitutions" Relationship="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_CountryCode_CountryCodeID" FromRole="CountryCode" ToRole="FinancialInstitution" />
+    <NavigationProperty Name="SubjectAddresses" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_CountryCode_CountryCodeID" FromRole="CountryCode" ToRole="SubjectAddress" />
+    <NavigationProperty Name="SubjectIdentifications" Relationship="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_CountryCode_IssuingCountryCodeID" FromRole="CountryCode" ToRole="SubjectIdentification" />
+    <NavigationProperty Name="Transmitters" Relationship="FinCENContextModel.FK_dbo_Transmitter_dbo_CountryCode_CountryCodeID" FromRole="CountryCode" ToRole="Transmitter" />
+  </EntityType>
+  <EntityType Name="CUSIPNumber">
+    <Key>
+      <PropertyRef Name="CUSIPNumberID" />
+    </Key>
+    <Property Name="CUSIPNumberID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" />
+    <Property Name="CUSIPNumber1" Type="String" MaxLength="39" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_CUSIPNumber_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="CUSIPNumber" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="FilingInstitution">
+    <Key>
+      <PropertyRef Name="FilingInstitutionID" />
+    </Key>
+    <Property Name="FilingInstitutionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TIN" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="FinancialInstitutionTypeOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SecuritiesTypeOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FinancialInstitutionID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AlternateName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PrimaryFederalRegulator" Type="Int32" Nullable="false" />
+    <Property Name="TINType" Type="Int32" Nullable="false" />
+    <Property Name="FinancialInstitutionType" Type="Int32" Nullable="false" />
+    <Property Name="FinancialInstitutionIDType" Type="Int32" Nullable="false" />
+    <Property Name="SecuritiesTypes" Type="Int32" Nullable="false" />
+    <Property Name="StateCodeID" Type="Int32" Nullable="false" />
+    <Property Name="PostalCodeID" Type="Int32" />
+    <Property Name="CountryCodeID" Type="Int32" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CountryCode" Relationship="FinCENContextModel.FK_dbo_FilingInstitution_dbo_CountryCode_CountryCodeID" FromRole="FilingInstitution" ToRole="CountryCode" />
+    <NavigationProperty Name="PostalCode" Relationship="FinCENContextModel.FK_dbo_FilingInstitution_dbo_PostalCode_PostalCodeID" FromRole="FilingInstitution" ToRole="PostalCode" />
+    <NavigationProperty Name="StateCode" Relationship="FinCENContextModel.FK_dbo_FilingInstitution_dbo_StateCode_StateCodeID" FromRole="FilingInstitution" ToRole="StateCode" />
+    <NavigationProperty Name="FilingInstitutionFilings" Relationship="FinCENContextModel.FK_dbo_FilingInstitutionFiling_dbo_FilingInstitution_FilingInstitutionID" FromRole="FilingInstitution" ToRole="FilingInstitutionFiling" />
+  </EntityType>
+  <EntityType Name="FilingInstitutionFiling">
+    <Key>
+      <PropertyRef Name="FilingInstitutionFilingID" />
+    </Key>
+    <Property Name="FilingInstitutionFilingID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FilingInstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="FinCENFile_FinCENFileID" Type="Int32" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FilingInstitution" Relationship="FinCENContextModel.FK_dbo_FilingInstitutionFiling_dbo_FilingInstitution_FilingInstitutionID" FromRole="FilingInstitutionFiling" ToRole="FilingInstitution" />
+    <NavigationProperty Name="FinCENFile" Relationship="FinCENContextModel.FK_dbo_FilingInstitutionFiling_dbo_FinCENFile_FinCENFile_FinCENFileID" FromRole="FilingInstitutionFiling" ToRole="FinCENFile" />
+    <NavigationProperty Name="FinancialInstitutionFilings" Relationship="FinCENContextModel.FK_dbo_FinancialInstitutionFiling_dbo_FilingInstitutionFiling_FilingInstitutionFiling_FilingInstitutionFilingID" FromRole="FilingInstitutionFiling" ToRole="FinancialInstitutionFiling" />
+  </EntityType>
+  <EntityType Name="FinancialInstitution">
+    <Key>
+      <PropertyRef Name="FinancialInstitutionID" />
+    </Key>
+    <Property Name="FinancialInstitutionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LocationCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="GamingInstitutionOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SecuritiesTypeOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FinCEN_ID" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LegalName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="AlternateName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TIN" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StateCodeID" Type="Int32" />
+    <Property Name="PostalCodeID" Type="Int32" />
+    <Property Name="CountryCodeID" Type="Int32" />
+    <Property Name="FinancialInstitutionType" Type="Int32" Nullable="false" />
+    <Property Name="PrimaryFederalRegulator" Type="Int32" Nullable="false" />
+    <Property Name="GamingInstitutionType" Type="Int32" Nullable="false" />
+    <Property Name="SecuritiesType" Type="Int32" Nullable="false" />
+    <Property Name="FinancialInstitutionIDType" Type="Int32" Nullable="false" />
+    <Property Name="InstitutionTransactionRole" Type="Int32" Nullable="false" />
+    <Property Name="TINType" Type="Int32" Nullable="false" />
+    <Property Name="StoreNumber" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CountryCode" Relationship="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_CountryCode_CountryCodeID" FromRole="FinancialInstitution" ToRole="CountryCode" />
+    <NavigationProperty Name="PostalCode" Relationship="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_PostalCode_PostalCodeID" FromRole="FinancialInstitution" ToRole="PostalCode" />
+    <NavigationProperty Name="StateCode" Relationship="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_StateCode_StateCodeID" FromRole="FinancialInstitution" ToRole="StateCode" />
+    <NavigationProperty Name="FinancialInstitutionFilings" Relationship="FinCENContextModel.FK_dbo_FinancialInstitutionFiling_dbo_FinancialInstitution_FinancialInstitutionID" FromRole="FinancialInstitution" ToRole="FinancialInstitutionFiling" />
+  </EntityType>
+  <EntityType Name="FinancialInstitutionFiling">
+    <Key>
+      <PropertyRef Name="FinancialInstitutionFilingID" />
+    </Key>
+    <Property Name="FinancialInstitutionFilingID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FinancialInstitutionID" Type="Int32" Nullable="false" />
+    <Property Name="FilingInstitutionFiling_FilingInstitutionFilingID" Type="Int32" />
+    <Property Name="InternalControlNumber" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="LossToInstitution" Type="Int32" Nullable="false" />
+    <Property Name="NoBranchActivity" Type="Boolean" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="BranchInstitutions" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_FinancialInstitutionFiling_FinancialInstitutionFiling_FinancialInstitutionFilingID" FromRole="FinancialInstitutionFiling" ToRole="BranchInstitution" />
+    <NavigationProperty Name="FilingInstitutionFiling" Relationship="FinCENContextModel.FK_dbo_FinancialInstitutionFiling_dbo_FilingInstitutionFiling_FilingInstitutionFiling_FilingInstitutionFilingID" FromRole="FinancialInstitutionFiling" ToRole="FilingInstitutionFiling" />
+    <NavigationProperty Name="FinancialInstitution" Relationship="FinCENContextModel.FK_dbo_FinancialInstitutionFiling_dbo_FinancialInstitution_FinancialInstitutionID" FromRole="FinancialInstitutionFiling" ToRole="FinancialInstitution" />
+    <NavigationProperty Name="SuspiciousActivities" Relationship="FinCENContextModel.FinancialInstitutionFilingSuspiciousActivities" FromRole="FinancialInstitutionFiling" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="FinCENFile">
+    <Key>
+      <PropertyRef Name="FinCENFileID" />
+    </Key>
+    <Property Name="FinCENFileID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TransmitterID" Type="Int32" Nullable="false" />
+    <Property Name="CoverageStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CoverageEndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TransmitterControlCode" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="BatchSequenceNumber" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="FilingInstitutionFilings" Relationship="FinCENContextModel.FK_dbo_FilingInstitutionFiling_dbo_FinCENFile_FinCENFile_FinCENFileID" FromRole="FinCENFile" ToRole="FilingInstitutionFiling" />
+    <NavigationProperty Name="Transmitter" Relationship="FinCENContextModel.FK_dbo_FinCENFile_dbo_Transmitter_TransmitterID" FromRole="FinCENFile" ToRole="Transmitter" />
+  </EntityType>
+  <EntityType Name="IPAddress">
+    <Key>
+      <PropertyRef Name="IPAddressID" />
+    </Key>
+    <Property Name="IPAddressID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" />
+    <Property Name="IPAddress1" Type="String" MaxLength="39" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_IPAddress_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="IPAddress" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="NAICSCode">
+    <Key>
+      <PropertyRef Name="NAICSCodeID" />
+    </Key>
+    <Property Name="NAICSCodeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Industry" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubjects" Relationship="FinCENContextModel.FK_dbo_SARSubject_dbo_NAICSCode_NAICSCodeID" FromRole="NAICSCode" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="NarrativeDescription">
+    <Key>
+      <PropertyRef Name="NarrativeDescriptionID" />
+    </Key>
+    <Property Name="NarrativeDescriptionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" />
+    <Property Name="NarrativeText" Type="String" MaxLength="850" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_NarrativeDescription_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="NarrativeDescription" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="PostalCode">
+    <Key>
+      <PropertyRef Name="PostalCodeID" />
+    </Key>
+    <Property Name="PostalCodeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="PostalCodeValue" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="County" Type="String" MaxLength="45" Unicode="true" FixedLength="false" />
+    <Property Name="AreaCode" Type="String" MaxLength="55" Unicode="true" FixedLength="false" />
+    <Property Name="CityAliasAbbreviation" Type="String" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="CityAliasName" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="Latitude" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Longitude" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TimeZone" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="Elevation" Type="Int32" Nullable="false" />
+    <Property Name="CountyFIPS" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="PreferredLastLineKey" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="StateFIPS" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="CityStateKey" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="CityAliasCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="CityMixedCase" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="CityAliasMixedCase" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="StateANSI" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="CountyANSI" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="FacilityCode" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="CityDeliveryIndicator" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="CarrierRouteRateSortation" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="FinanceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UniqueZIPName" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="BranchInstitutions" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_PostalCode_PostalCodeID" FromRole="PostalCode" ToRole="BranchInstitution" />
+    <NavigationProperty Name="FilingInstitutions" Relationship="FinCENContextModel.FK_dbo_FilingInstitution_dbo_PostalCode_PostalCodeID" FromRole="PostalCode" ToRole="FilingInstitution" />
+    <NavigationProperty Name="FinancialInstitutions" Relationship="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_PostalCode_PostalCodeID" FromRole="PostalCode" ToRole="FinancialInstitution" />
+    <NavigationProperty Name="SubjectAddresses" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_PostalCode_PostalCodeID" FromRole="PostalCode" ToRole="SubjectAddress" />
+    <NavigationProperty Name="Transmitters" Relationship="FinCENContextModel.FK_dbo_Transmitter_dbo_PostalCode_PostalCodeID" FromRole="PostalCode" ToRole="Transmitter" />
+  </EntityType>
+  <EntityType Name="ProductDescription">
+    <Key>
+      <PropertyRef Name="ProductDescriptionID" />
+    </Key>
+    <Property Name="ProductDescriptionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_ProductDescription_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="ProductDescription" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="RecordChangeEntry">
+    <Key>
+      <PropertyRef Name="RecordChangeEntryID" />
+    </Key>
+    <Property Name="RecordChangeEntryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="RevisionHistorieID" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RecordID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ColumnChangeEntries" Relationship="FinCENContextModel.FK_dbo_ColumnChangeEntries_dbo_RecordChangeEntries_RecordChangeEntryID" FromRole="RecordChangeEntries" ToRole="ColumnChangeEntries" />
+    <NavigationProperty Name="RevisionHistory" Relationship="FinCENContextModel.FK_dbo_RecordChangeEntries_dbo_RevisionHistories_RevisionHistorieID" FromRole="RecordChangeEntries" ToRole="RevisionHistories" />
+  </EntityType>
+  <EntityType Name="RevisionHistory">
+    <Key>
+      <PropertyRef Name="RevisionHistorieID" />
+    </Key>
+    <Property Name="RevisionHistorieID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ChangeType" Type="Int32" Nullable="false" />
+    <Property Name="EventDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="RecordChangeEntries" Relationship="FinCENContextModel.FK_dbo_RecordChangeEntries_dbo_RevisionHistories_RevisionHistorieID" FromRole="RevisionHistories" ToRole="RecordChangeEntries" />
+  </EntityType>
+  <EntityType Name="SARSubject">
+    <Key>
+      <PropertyRef Name="SARSubjectID" />
+    </Key>
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" />
+    <Property Name="IsEntity" Type="Boolean" Nullable="false" />
+    <Property Name="AllCriticalInfoMissing" Type="Boolean" Nullable="false" />
+    <Property Name="SubjectLastName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="SubjectFirstName" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="Suffix" Type="String" MaxLength="35" Unicode="true" FixedLength="false" />
+    <Property Name="Occupation" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TIN" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="CorroborativeStatementToFiler" Type="Boolean" />
+    <Property Name="NoKnownAccountInvolved" Type="Boolean" Nullable="false" />
+    <Property Name="Gender" Type="Int32" Nullable="false" />
+    <Property Name="TINType" Type="Int32" Nullable="false" />
+    <Property Name="SubjectRole" Type="Int32" Nullable="false" />
+    <Property Name="NAICSCodeID" Type="Int32" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="AffectedAccounts" Relationship="FinCENContextModel.FK_dbo_AffectedAccount_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="AffectedAccount" />
+    <NavigationProperty Name="NAICSCode" Relationship="FinCENContextModel.FK_dbo_SARSubject_dbo_NAICSCode_NAICSCodeID" FromRole="SARSubject" ToRole="NAICSCode" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_SARSubject_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SARSubject" ToRole="SuspiciousActivity" />
+    <NavigationProperty Name="SubjectAddresses" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectAddress" />
+    <NavigationProperty Name="SubjectAlternateNames" Relationship="FinCENContextModel.FK_dbo_SubjectAlternateName_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectAlternateName" />
+    <NavigationProperty Name="SubjectEmails" Relationship="FinCENContextModel.FK_dbo_SubjectEmail_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectEmail" />
+    <NavigationProperty Name="SubjectIdentifications" Relationship="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectIdentification" />
+    <NavigationProperty Name="SubjectRelationships" Relationship="FinCENContextModel.FK_dbo_SubjectRelationship_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectRelationship" />
+    <NavigationProperty Name="SubjectTelephones" Relationship="FinCENContextModel.FK_dbo_SubjectTelephone_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectTelephone" />
+    <NavigationProperty Name="SubjectWebsites" Relationship="FinCENContextModel.FK_dbo_SubjectWebsite_dbo_SARSubject_SARSubjectID" FromRole="SARSubject" ToRole="SubjectWebsite" />
+  </EntityType>
+  <EntityType Name="StateCode">
+    <Key>
+      <PropertyRef Name="StateCodeID" />
+    </Key>
+    <Property Name="StateCodeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ISOCode" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="StateName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="BranchInstitutions" Relationship="FinCENContextModel.FK_dbo_BranchInstitution_dbo_StateCode_StateCodeID" FromRole="StateCode" ToRole="BranchInstitution" />
+    <NavigationProperty Name="FilingInstitutions" Relationship="FinCENContextModel.FK_dbo_FilingInstitution_dbo_StateCode_StateCodeID" FromRole="StateCode" ToRole="FilingInstitution" />
+    <NavigationProperty Name="FinancialInstitutions" Relationship="FinCENContextModel.FK_dbo_FinancialInstitution_dbo_StateCode_StateCodeID" FromRole="StateCode" ToRole="FinancialInstitution" />
+    <NavigationProperty Name="SubjectAddresses" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_StateCode_StateCodeID" FromRole="StateCode" ToRole="SubjectAddress" />
+    <NavigationProperty Name="SubjectIdentifications" Relationship="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_StateCode_IssuingStateCodeID" FromRole="StateCode" ToRole="SubjectIdentification" />
+    <NavigationProperty Name="Transmitters" Relationship="FinCENContextModel.FK_dbo_Transmitter_dbo_StateCode_StateCodeID" FromRole="StateCode" ToRole="Transmitter" />
+  </EntityType>
+  <EntityType Name="SubjectAddress">
+    <Key>
+      <PropertyRef Name="SubjectAddressID" />
+    </Key>
+    <Property Name="SubjectAddressID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="StreetAddress" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="StateCodeID" Type="Int32" />
+    <Property Name="PostalCodeID" Type="Int32" />
+    <Property Name="CountryCodeID" Type="Int32" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CountryCode" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_CountryCode_CountryCodeID" FromRole="SubjectAddress" ToRole="CountryCode" />
+    <NavigationProperty Name="PostalCode" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_PostalCode_PostalCodeID" FromRole="SubjectAddress" ToRole="PostalCode" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_SARSubject_SARSubjectID" FromRole="SubjectAddress" ToRole="SARSubject" />
+    <NavigationProperty Name="StateCode" Relationship="FinCENContextModel.FK_dbo_SubjectAddress_dbo_StateCode_StateCodeID" FromRole="SubjectAddress" ToRole="StateCode" />
+  </EntityType>
+  <EntityType Name="SubjectAlternateName">
+    <Key>
+      <PropertyRef Name="SubjectAlternateNameID" />
+    </Key>
+    <Property Name="SubjectAlternateNameID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="AlternateName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectAlternateName_dbo_SARSubject_SARSubjectID" FromRole="SubjectAlternateName" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="SubjectEmail">
+    <Key>
+      <PropertyRef Name="SubjectEmailID" />
+    </Key>
+    <Property Name="SubjectEmailID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectEmail_dbo_SARSubject_SARSubjectID" FromRole="SubjectEmail" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="SubjectIdentification">
+    <Key>
+      <PropertyRef Name="SubjectIdentificationID" />
+    </Key>
+    <Property Name="SubjectIdentificationID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="IdentificationNumber" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="IssuingStateCodeID" Type="Int32" Nullable="false" />
+    <Property Name="IssuingCountryCodeID" Type="Int32" Nullable="false" />
+    <Property Name="IdentificationTypeOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IdentificationType" Type="Int32" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CountryCode" Relationship="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_CountryCode_IssuingCountryCodeID" FromRole="SubjectIdentification" ToRole="CountryCode" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_SARSubject_SARSubjectID" FromRole="SubjectIdentification" ToRole="SARSubject" />
+    <NavigationProperty Name="StateCode" Relationship="FinCENContextModel.FK_dbo_SubjectIdentification_dbo_StateCode_IssuingStateCodeID" FromRole="SubjectIdentification" ToRole="StateCode" />
+  </EntityType>
+  <EntityType Name="SubjectRelationship">
+    <Key>
+      <PropertyRef Name="SubjectRelationshipID" />
+    </Key>
+    <Property Name="SubjectRelationshipID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="RelatedInstitutionTIN" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="SubjectRelationshipOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SubjectRelationshipTypes" Type="Int32" Nullable="false" />
+    <Property Name="RelationshipStatusType" Type="Int32" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectRelationship_dbo_SARSubject_SARSubjectID" FromRole="SubjectRelationship" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="SubjectTelephone">
+    <Key>
+      <PropertyRef Name="SubjectTelephoneID" />
+    </Key>
+    <Property Name="SubjectTelephoneID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Extension" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="PhoneType" Type="Int32" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectTelephone_dbo_SARSubject_SARSubjectID" FromRole="SubjectTelephone" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="SubjectWebsite">
+    <Key>
+      <PropertyRef Name="SubjectWebsiteID" />
+    </Key>
+    <Property Name="SubjectWebsiteID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SARSubjectID" Type="Int32" Nullable="false" />
+    <Property Name="WebsiteURL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SARSubject" Relationship="FinCENContextModel.FK_dbo_SubjectWebsite_dbo_SARSubject_SARSubjectID" FromRole="SubjectWebsite" ToRole="SARSubject" />
+  </EntityType>
+  <EntityType Name="SuspiciousActivity">
+    <Key>
+      <PropertyRef Name="SuspiciousActivityID" />
+    </Key>
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionSequenceNumber" Type="Int32" Nullable="false" />
+    <Property Name="IsContinuingActivity" Type="Boolean" Nullable="false" />
+    <Property Name="IsJointReport" Type="Boolean" Nullable="false" />
+    <Property Name="PriorReportID" Type="Int32" />
+    <Property Name="AmountInvolved" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsAmountUnknown" Type="Boolean" Nullable="false" />
+    <Property Name="ActivityStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ActivityEndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CumulativeAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="StructuringOtherDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TerroristFinancingOtherDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FraudOtherDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CasinoActivityOtherDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MoneyLaunderingOtherDescription" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SuspiciousIdentificationOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UncategorizedSuspiciousActivityOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InsuranceActivityOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SecuritiesActivityOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MortageFraudOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProductTypeOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="InstrumentTypeOther" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LEContactAgency" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="LEContactName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="LEContactTelephone" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="LEContactExtension" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="LEContactDate" Type="DateTime" Precision="3" />
+    <Property Name="FilingInstitutionContactOffice" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="FilingInstitutionPhoneNumber" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="FilingInstitutionExtension" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+    <Property Name="DateFiled" Type="DateTime" Precision="3" />
+    <Property Name="FilingType" Type="Int32" Nullable="false" />
+    <Property Name="StructuringTypes" Type="Int32" Nullable="false" />
+    <Property Name="TerroristFinancingTypes" Type="Int32" Nullable="false" />
+    <Property Name="FraudTypes" Type="Int32" Nullable="false" />
+    <Property Name="CasinoActivityTypes" Type="Int32" Nullable="false" />
+    <Property Name="MoneyLaunderingTypes" Type="Int32" Nullable="false" />
+    <Property Name="SuspiciousIdentificationTypes" Type="Int32" Nullable="false" />
+    <Property Name="UncategorizedSuspiciousActivityTypes" Type="Int32" Nullable="false" />
+    <Property Name="InsuranceActivityTypes" Type="Int32" Nullable="false" />
+    <Property Name="SecuritiesActivityTypes" Type="Int32" Nullable="false" />
+    <Property Name="MortageFraudTypes" Type="Int32" Nullable="false" />
+    <Property Name="ProductTypes" Type="Int32" Nullable="false" />
+    <Property Name="InstrumentTypes" Type="Int32" Nullable="false" />
+    <Property Name="BSAID" Type="String" MaxLength="14" Unicode="true" FixedLength="false" />
+    <Property Name="Survey_WUTransactionApproved" Type="Boolean" />
+    <Property Name="Survey_WUHoldOnFunds" Type="Boolean" />
+    <Property Name="Survey_MultipleTransactionsInSameDay" Type="Boolean" />
+    <Property Name="Survey_MultipleTransactionsInSameDay_Amounts" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Survey_MultipleTransactionConsecutiveDays" Type="Boolean" />
+    <Property Name="Survey_MultipleTransactionConsecutiveDays_Amounts" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Survey_TransactionExplaination" Type="Boolean" />
+    <Property Name="Survey_TransactionExplainationDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Survey_CustomerDirectedByThirdParty" Type="Boolean" />
+    <Property Name="Survey_CustomerDirectedByThirdPartyDescription" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="Survey_SendsObtainedPhotoID" Type="Boolean" />
+    <Property Name="Survey_SendsObtainedIdentityInformation" Type="Boolean" />
+    <Property Name="Survey_ReceivesObtainedPhotoID" Type="Boolean" />
+    <Property Name="Survey_ReceivesObtainedIdentityInformation" Type="Boolean" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CommodityTypes" Relationship="FinCENContextModel.FK_dbo_CommodityType_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="CommodityType" />
+    <NavigationProperty Name="CUSIPNumbers" Relationship="FinCENContextModel.FK_dbo_CUSIPNumber_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="CUSIPNumber" />
+    <NavigationProperty Name="IPAddresses" Relationship="FinCENContextModel.FK_dbo_IPAddress_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="IPAddress" />
+    <NavigationProperty Name="NarrativeDescriptions" Relationship="FinCENContextModel.FK_dbo_NarrativeDescription_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="NarrativeDescription" />
+    <NavigationProperty Name="ProductDescriptions" Relationship="FinCENContextModel.FK_dbo_ProductDescription_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="ProductDescription" />
+    <NavigationProperty Name="SARSubjects" Relationship="FinCENContextModel.FK_dbo_SARSubject_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="SARSubject" />
+    <NavigationProperty Name="SuspiciousActivity1" Relationship="FinCENContextModel.FK_dbo_SuspiciousActivity_dbo_SuspiciousActivity_PriorReportID" FromRole="SuspiciousActivity" ToRole="SuspiciousActivity1" />
+    <NavigationProperty Name="SuspiciousActivity2" Relationship="FinCENContextModel.FK_dbo_SuspiciousActivity_dbo_SuspiciousActivity_PriorReportID" FromRole="SuspiciousActivity1" ToRole="SuspiciousActivity" />
+    <NavigationProperty Name="TradingMarkets" Relationship="FinCENContextModel.FK_dbo_TradingMarket_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="SuspiciousActivity" ToRole="TradingMarket" />
+    <NavigationProperty Name="FinancialInstitutionFilings" Relationship="FinCENContextModel.FinancialInstitutionFilingSuspiciousActivities" FromRole="SuspiciousActivity" ToRole="FinancialInstitutionFiling" />
+  </EntityType>
+  <EntityType Name="TradingMarket">
+    <Key>
+      <PropertyRef Name="TradingMarketID" />
+    </Key>
+    <Property Name="TradingMarketID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SuspiciousActivityID" Type="Int32" Nullable="false" />
+    <Property Name="MarketCode" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SuspiciousActivity" Relationship="FinCENContextModel.FK_dbo_TradingMarket_dbo_SuspiciousActivity_SuspiciousActivityID" FromRole="TradingMarket" ToRole="SuspiciousActivity" />
+  </EntityType>
+  <EntityType Name="Transmitter">
+    <Key>
+      <PropertyRef Name="TransmitterID" />
+    </Key>
+    <Property Name="TransmitterID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="ContactName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TransmitterTIN" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="StateCodeID" Type="Int32" Nullable="false" />
+    <Property Name="PostalCodeID" Type="Int32" Nullable="false" />
+    <Property Name="CountryCodeID" Type="Int32" Nullable="false" />
+    <Property Name="LastChangeDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CountryCode" Relationship="FinCENContextModel.FK_dbo_Transmitter_dbo_CountryCode_CountryCodeID" FromRole="Transmitter" ToRole="CountryCode" />
+    <NavigationProperty Name="FinCENFiles" Relationship="FinCENContextModel.FK_dbo_FinCENFile_dbo_Transmitter_TransmitterID" FromRole="Transmitter" ToRole="FinCENFile" />
+    <NavigationProperty Name="PostalCode" Relationship="FinCENContextModel.FK_dbo_Transmitter_dbo_PostalCode_PostalCodeID" FromRole="Transmitter" ToRole="PostalCode" />
+    <NavigationProperty Name="StateCode" Relationship="FinCENContextModel.FK_dbo_Transmitter_dbo_StateCode_StateCodeID" FromRole="Transmitter" ToRole="StateCode" />
+  </EntityType>
+  <Association Name="FK_dbo_AffectedAccount_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AffectedAccount" Type="FinCENContextModel.AffectedAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="AffectedAccount">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_BranchInstitution_dbo_CountryCode_CountryCodeID">
+    <End Role="CountryCode" Type="FinCENContextModel.CountryCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BranchInstitution" Type="FinCENContextModel.BranchInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryCode">
+        <PropertyRef Name="CountryCodeID" />
+      </Principal>
+      <Dependent Role="BranchInstitution">
+        <PropertyRef Name="CountryCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_BranchInstitution_dbo_FinancialInstitutionFiling_FinancialInstitutionFiling_FinancialInstitutionFilingID">
+    <End Role="FinancialInstitutionFiling" Type="FinCENContextModel.FinancialInstitutionFiling" Multiplicity="0..1" />
+    <End Role="BranchInstitution" Type="FinCENContextModel.BranchInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FinancialInstitutionFiling">
+        <PropertyRef Name="FinancialInstitutionFilingID" />
+      </Principal>
+      <Dependent Role="BranchInstitution">
+        <PropertyRef Name="FinancialInstitutionFiling_FinancialInstitutionFilingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_BranchInstitution_dbo_PostalCode_PostalCodeID">
+    <End Role="PostalCode" Type="FinCENContextModel.PostalCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BranchInstitution" Type="FinCENContextModel.BranchInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostalCode">
+        <PropertyRef Name="PostalCodeID" />
+      </Principal>
+      <Dependent Role="BranchInstitution">
+        <PropertyRef Name="PostalCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_BranchInstitution_dbo_StateCode_StateCodeID">
+    <End Role="StateCode" Type="FinCENContextModel.StateCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BranchInstitution" Type="FinCENContextModel.BranchInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateCode">
+        <PropertyRef Name="StateCodeID" />
+      </Principal>
+      <Dependent Role="BranchInstitution">
+        <PropertyRef Name="StateCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ColumnChangeEntries_dbo_RecordChangeEntries_RecordChangeEntryID">
+    <End Role="RecordChangeEntries" Type="FinCENContextModel.RecordChangeEntry" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ColumnChangeEntries" Type="FinCENContextModel.ColumnChangeEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecordChangeEntries">
+        <PropertyRef Name="RecordChangeEntryID" />
+      </Principal>
+      <Dependent Role="ColumnChangeEntries">
+        <PropertyRef Name="RecordChangeEntryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_CommodityType_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CommodityType" Type="FinCENContextModel.CommodityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="CommodityType">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FilingInstitution_dbo_CountryCode_CountryCodeID">
+    <End Role="CountryCode" Type="FinCENContextModel.CountryCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FilingInstitution" Type="FinCENContextModel.FilingInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryCode">
+        <PropertyRef Name="CountryCodeID" />
+      </Principal>
+      <Dependent Role="FilingInstitution">
+        <PropertyRef Name="CountryCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FinancialInstitution_dbo_CountryCode_CountryCodeID">
+    <End Role="CountryCode" Type="FinCENContextModel.CountryCode" Multiplicity="0..1" />
+    <End Role="FinancialInstitution" Type="FinCENContextModel.FinancialInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryCode">
+        <PropertyRef Name="CountryCodeID" />
+      </Principal>
+      <Dependent Role="FinancialInstitution">
+        <PropertyRef Name="CountryCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectAddress_dbo_CountryCode_CountryCodeID">
+    <End Role="CountryCode" Type="FinCENContextModel.CountryCode" Multiplicity="0..1" />
+    <End Role="SubjectAddress" Type="FinCENContextModel.SubjectAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryCode">
+        <PropertyRef Name="CountryCodeID" />
+      </Principal>
+      <Dependent Role="SubjectAddress">
+        <PropertyRef Name="CountryCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectIdentification_dbo_CountryCode_IssuingCountryCodeID">
+    <End Role="CountryCode" Type="FinCENContextModel.CountryCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectIdentification" Type="FinCENContextModel.SubjectIdentification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryCode">
+        <PropertyRef Name="CountryCodeID" />
+      </Principal>
+      <Dependent Role="SubjectIdentification">
+        <PropertyRef Name="IssuingCountryCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Transmitter_dbo_CountryCode_CountryCodeID">
+    <End Role="CountryCode" Type="FinCENContextModel.CountryCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Transmitter" Type="FinCENContextModel.Transmitter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryCode">
+        <PropertyRef Name="CountryCodeID" />
+      </Principal>
+      <Dependent Role="Transmitter">
+        <PropertyRef Name="CountryCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_CUSIPNumber_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CUSIPNumber" Type="FinCENContextModel.CUSIPNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="CUSIPNumber">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FilingInstitution_dbo_PostalCode_PostalCodeID">
+    <End Role="PostalCode" Type="FinCENContextModel.PostalCode" Multiplicity="0..1" />
+    <End Role="FilingInstitution" Type="FinCENContextModel.FilingInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostalCode">
+        <PropertyRef Name="PostalCodeID" />
+      </Principal>
+      <Dependent Role="FilingInstitution">
+        <PropertyRef Name="PostalCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FilingInstitution_dbo_StateCode_StateCodeID">
+    <End Role="StateCode" Type="FinCENContextModel.StateCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FilingInstitution" Type="FinCENContextModel.FilingInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateCode">
+        <PropertyRef Name="StateCodeID" />
+      </Principal>
+      <Dependent Role="FilingInstitution">
+        <PropertyRef Name="StateCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FilingInstitutionFiling_dbo_FilingInstitution_FilingInstitutionID">
+    <End Role="FilingInstitution" Type="FinCENContextModel.FilingInstitution" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FilingInstitutionFiling" Type="FinCENContextModel.FilingInstitutionFiling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FilingInstitution">
+        <PropertyRef Name="FilingInstitutionID" />
+      </Principal>
+      <Dependent Role="FilingInstitutionFiling">
+        <PropertyRef Name="FilingInstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FilingInstitutionFiling_dbo_FinCENFile_FinCENFile_FinCENFileID">
+    <End Role="FinCENFile" Type="FinCENContextModel.FinCENFile" Multiplicity="0..1" />
+    <End Role="FilingInstitutionFiling" Type="FinCENContextModel.FilingInstitutionFiling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FinCENFile">
+        <PropertyRef Name="FinCENFileID" />
+      </Principal>
+      <Dependent Role="FilingInstitutionFiling">
+        <PropertyRef Name="FinCENFile_FinCENFileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FinancialInstitutionFiling_dbo_FilingInstitutionFiling_FilingInstitutionFiling_FilingInstitutionFilingID">
+    <End Role="FilingInstitutionFiling" Type="FinCENContextModel.FilingInstitutionFiling" Multiplicity="0..1" />
+    <End Role="FinancialInstitutionFiling" Type="FinCENContextModel.FinancialInstitutionFiling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FilingInstitutionFiling">
+        <PropertyRef Name="FilingInstitutionFilingID" />
+      </Principal>
+      <Dependent Role="FinancialInstitutionFiling">
+        <PropertyRef Name="FilingInstitutionFiling_FilingInstitutionFilingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FinancialInstitution_dbo_PostalCode_PostalCodeID">
+    <End Role="PostalCode" Type="FinCENContextModel.PostalCode" Multiplicity="0..1" />
+    <End Role="FinancialInstitution" Type="FinCENContextModel.FinancialInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostalCode">
+        <PropertyRef Name="PostalCodeID" />
+      </Principal>
+      <Dependent Role="FinancialInstitution">
+        <PropertyRef Name="PostalCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FinancialInstitution_dbo_StateCode_StateCodeID">
+    <End Role="StateCode" Type="FinCENContextModel.StateCode" Multiplicity="0..1" />
+    <End Role="FinancialInstitution" Type="FinCENContextModel.FinancialInstitution" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateCode">
+        <PropertyRef Name="StateCodeID" />
+      </Principal>
+      <Dependent Role="FinancialInstitution">
+        <PropertyRef Name="StateCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FinancialInstitutionFiling_dbo_FinancialInstitution_FinancialInstitutionID">
+    <End Role="FinancialInstitution" Type="FinCENContextModel.FinancialInstitution" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FinancialInstitutionFiling" Type="FinCENContextModel.FinancialInstitutionFiling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FinancialInstitution">
+        <PropertyRef Name="FinancialInstitutionID" />
+      </Principal>
+      <Dependent Role="FinancialInstitutionFiling">
+        <PropertyRef Name="FinancialInstitutionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_FinCENFile_dbo_Transmitter_TransmitterID">
+    <End Role="Transmitter" Type="FinCENContextModel.Transmitter" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FinCENFile" Type="FinCENContextModel.FinCENFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transmitter">
+        <PropertyRef Name="TransmitterID" />
+      </Principal>
+      <Dependent Role="FinCENFile">
+        <PropertyRef Name="TransmitterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_IPAddress_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IPAddress" Type="FinCENContextModel.IPAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="IPAddress">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SARSubject_dbo_NAICSCode_NAICSCodeID">
+    <End Role="NAICSCode" Type="FinCENContextModel.NAICSCode" Multiplicity="0..1" />
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NAICSCode">
+        <PropertyRef Name="NAICSCodeID" />
+      </Principal>
+      <Dependent Role="SARSubject">
+        <PropertyRef Name="NAICSCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_NarrativeDescription_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NarrativeDescription" Type="FinCENContextModel.NarrativeDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="NarrativeDescription">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectAddress_dbo_PostalCode_PostalCodeID">
+    <End Role="PostalCode" Type="FinCENContextModel.PostalCode" Multiplicity="0..1" />
+    <End Role="SubjectAddress" Type="FinCENContextModel.SubjectAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostalCode">
+        <PropertyRef Name="PostalCodeID" />
+      </Principal>
+      <Dependent Role="SubjectAddress">
+        <PropertyRef Name="PostalCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Transmitter_dbo_PostalCode_PostalCodeID">
+    <End Role="PostalCode" Type="FinCENContextModel.PostalCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Transmitter" Type="FinCENContextModel.Transmitter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PostalCode">
+        <PropertyRef Name="PostalCodeID" />
+      </Principal>
+      <Dependent Role="Transmitter">
+        <PropertyRef Name="PostalCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ProductDescription_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProductDescription" Type="FinCENContextModel.ProductDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="ProductDescription">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_RecordChangeEntries_dbo_RevisionHistories_RevisionHistorieID">
+    <End Role="RevisionHistories" Type="FinCENContextModel.RevisionHistory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RecordChangeEntries" Type="FinCENContextModel.RecordChangeEntry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RevisionHistories">
+        <PropertyRef Name="RevisionHistorieID" />
+      </Principal>
+      <Dependent Role="RecordChangeEntries">
+        <PropertyRef Name="RevisionHistorieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SARSubject_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="0..1" />
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="SARSubject">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectAddress_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectAddress" Type="FinCENContextModel.SubjectAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectAddress">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectAlternateName_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectAlternateName" Type="FinCENContextModel.SubjectAlternateName" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectAlternateName">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectEmail_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectEmail" Type="FinCENContextModel.SubjectEmail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectEmail">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectIdentification_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectIdentification" Type="FinCENContextModel.SubjectIdentification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectIdentification">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectRelationship_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectRelationship" Type="FinCENContextModel.SubjectRelationship" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectRelationship">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectTelephone_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectTelephone" Type="FinCENContextModel.SubjectTelephone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectTelephone">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectWebsite_dbo_SARSubject_SARSubjectID">
+    <End Role="SARSubject" Type="FinCENContextModel.SARSubject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectWebsite" Type="FinCENContextModel.SubjectWebsite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SARSubject">
+        <PropertyRef Name="SARSubjectID" />
+      </Principal>
+      <Dependent Role="SubjectWebsite">
+        <PropertyRef Name="SARSubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectAddress_dbo_StateCode_StateCodeID">
+    <End Role="StateCode" Type="FinCENContextModel.StateCode" Multiplicity="0..1" />
+    <End Role="SubjectAddress" Type="FinCENContextModel.SubjectAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateCode">
+        <PropertyRef Name="StateCodeID" />
+      </Principal>
+      <Dependent Role="SubjectAddress">
+        <PropertyRef Name="StateCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SubjectIdentification_dbo_StateCode_IssuingStateCodeID">
+    <End Role="StateCode" Type="FinCENContextModel.StateCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SubjectIdentification" Type="FinCENContextModel.SubjectIdentification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateCode">
+        <PropertyRef Name="StateCodeID" />
+      </Principal>
+      <Dependent Role="SubjectIdentification">
+        <PropertyRef Name="IssuingStateCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Transmitter_dbo_StateCode_StateCodeID">
+    <End Role="StateCode" Type="FinCENContextModel.StateCode" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Transmitter" Type="FinCENContextModel.Transmitter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StateCode">
+        <PropertyRef Name="StateCodeID" />
+      </Principal>
+      <Dependent Role="Transmitter">
+        <PropertyRef Name="StateCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_SuspiciousActivity_dbo_SuspiciousActivity_PriorReportID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="0..1" />
+    <End Role="SuspiciousActivity1" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="SuspiciousActivity1">
+        <PropertyRef Name="PriorReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_TradingMarket_dbo_SuspiciousActivity_SuspiciousActivityID">
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TradingMarket" Type="FinCENContextModel.TradingMarket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SuspiciousActivity">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Principal>
+      <Dependent Role="TradingMarket">
+        <PropertyRef Name="SuspiciousActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FinancialInstitutionFilingSuspiciousActivities">
+    <End Role="FinancialInstitutionFiling" Type="FinCENContextModel.FinancialInstitutionFiling" Multiplicity="*" />
+    <End Role="SuspiciousActivity" Type="FinCENContextModel.SuspiciousActivity" Multiplicity="*" />
+  </Association>
+</Schema>

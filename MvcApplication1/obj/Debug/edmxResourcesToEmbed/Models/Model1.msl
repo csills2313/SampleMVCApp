@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinCENContextModelStoreContainer" CdmEntityContainer="FinCENContextEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="FinCENContextModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffectedAccounts">
+      <EntityTypeMapping TypeName="FinCENContextModel.AffectedAccount">
+        <MappingFragment StoreEntitySet="AffectedAccount">
+          <ScalarProperty Name="AffectedAccountID" ColumnName="AffectedAccountID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="IsNonUSInstitution" ColumnName="IsNonUSInstitution" />
+          <ScalarProperty Name="TINOfHoldingInstitution" ColumnName="TINOfHoldingInstitution" />
+          <ScalarProperty Name="TINOfSubjectHeldByInstitution" ColumnName="TINOfSubjectHeldByInstitution" />
+          <ScalarProperty Name="IsAccountClosed" ColumnName="IsAccountClosed" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BranchInstitutions">
+      <EntityTypeMapping TypeName="FinCENContextModel.BranchInstitution">
+        <MappingFragment StoreEntitySet="BranchInstitution">
+          <ScalarProperty Name="BranchInstitutionID" ColumnName="BranchInstitutionID" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="RSSDNumber" ColumnName="RSSDNumber" />
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="PostalCodeID" ColumnName="PostalCodeID" />
+          <ScalarProperty Name="CountryCodeID" ColumnName="CountryCodeID" />
+          <ScalarProperty Name="FinancialInstitutionFiling_FinancialInstitutionFilingID" ColumnName="FinancialInstitutionFiling_FinancialInstitutionFilingID" />
+          <ScalarProperty Name="BranchTransactionRole" ColumnName="BranchTransactionRole" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ColumnChangeEntries">
+      <EntityTypeMapping TypeName="FinCENContextModel.ColumnChangeEntry">
+        <MappingFragment StoreEntitySet="ColumnChangeEntries">
+          <ScalarProperty Name="ColumnChangeEntryID" ColumnName="ColumnChangeEntryID" />
+          <ScalarProperty Name="RecordChangeEntryID" ColumnName="RecordChangeEntryID" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="OldValue" ColumnName="OldValue" />
+          <ScalarProperty Name="NewValue" ColumnName="NewValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommodityTypes">
+      <EntityTypeMapping TypeName="FinCENContextModel.CommodityType">
+        <MappingFragment StoreEntitySet="CommodityType">
+          <ScalarProperty Name="CommodityTypeID" ColumnName="CommodityTypeID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="CommodityTypeName" ColumnName="CommodityTypeName" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryCodes">
+      <EntityTypeMapping TypeName="FinCENContextModel.CountryCode">
+        <MappingFragment StoreEntitySet="CountryCode">
+          <ScalarProperty Name="CountryCodeID" ColumnName="CountryCodeID" />
+          <ScalarProperty Name="ISOCode" ColumnName="ISOCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSIPNumbers">
+      <EntityTypeMapping TypeName="FinCENContextModel.CUSIPNumber">
+        <MappingFragment StoreEntitySet="CUSIPNumber">
+          <ScalarProperty Name="CUSIPNumberID" ColumnName="CUSIPNumberID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="CUSIPNumber1" ColumnName="CUSIPNumber" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilingInstitutions">
+      <EntityTypeMapping TypeName="FinCENContextModel.FilingInstitution">
+        <MappingFragment StoreEntitySet="FilingInstitution">
+          <ScalarProperty Name="FilingInstitutionID" ColumnName="FilingInstitutionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="FinancialInstitutionTypeOther" ColumnName="FinancialInstitutionTypeOther" />
+          <ScalarProperty Name="SecuritiesTypeOther" ColumnName="SecuritiesTypeOther" />
+          <ScalarProperty Name="FinancialInstitutionID" ColumnName="FinancialInstitutionID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="AlternateName" ColumnName="AlternateName" />
+          <ScalarProperty Name="PrimaryFederalRegulator" ColumnName="PrimaryFederalRegulator" />
+          <ScalarProperty Name="TINType" ColumnName="TINType" />
+          <ScalarProperty Name="FinancialInstitutionType" ColumnName="FinancialInstitutionType" />
+          <ScalarProperty Name="FinancialInstitutionIDType" ColumnName="FinancialInstitutionIDType" />
+          <ScalarProperty Name="SecuritiesTypes" ColumnName="SecuritiesTypes" />
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="PostalCodeID" ColumnName="PostalCodeID" />
+          <ScalarProperty Name="CountryCodeID" ColumnName="CountryCodeID" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilingInstitutionFilings">
+      <EntityTypeMapping TypeName="FinCENContextModel.FilingInstitutionFiling">
+        <MappingFragment StoreEntitySet="FilingInstitutionFiling">
+          <ScalarProperty Name="FilingInstitutionFilingID" ColumnName="FilingInstitutionFilingID" />
+          <ScalarProperty Name="FilingInstitutionID" ColumnName="FilingInstitutionID" />
+          <ScalarProperty Name="FinCENFile_FinCENFileID" ColumnName="FinCENFile_FinCENFileID" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinancialInstitutions">
+      <EntityTypeMapping TypeName="FinCENContextModel.FinancialInstitution">
+        <MappingFragment StoreEntitySet="FinancialInstitution">
+          <ScalarProperty Name="FinancialInstitutionID" ColumnName="FinancialInstitutionID" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="GamingInstitutionOther" ColumnName="GamingInstitutionOther" />
+          <ScalarProperty Name="SecuritiesTypeOther" ColumnName="SecuritiesTypeOther" />
+          <ScalarProperty Name="FinCEN_ID" ColumnName="FinCEN_ID" />
+          <ScalarProperty Name="LegalName" ColumnName="LegalName" />
+          <ScalarProperty Name="AlternateName" ColumnName="AlternateName" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="PostalCodeID" ColumnName="PostalCodeID" />
+          <ScalarProperty Name="CountryCodeID" ColumnName="CountryCodeID" />
+          <ScalarProperty Name="FinancialInstitutionType" ColumnName="FinancialInstitutionType" />
+          <ScalarProperty Name="PrimaryFederalRegulator" ColumnName="PrimaryFederalRegulator" />
+          <ScalarProperty Name="GamingInstitutionType" ColumnName="GamingInstitutionType" />
+          <ScalarProperty Name="SecuritiesType" ColumnName="SecuritiesType" />
+          <ScalarProperty Name="FinancialInstitutionIDType" ColumnName="FinancialInstitutionIDType" />
+          <ScalarProperty Name="InstitutionTransactionRole" ColumnName="InstitutionTransactionRole" />
+          <ScalarProperty Name="TINType" ColumnName="TINType" />
+          <ScalarProperty Name="StoreNumber" ColumnName="StoreNumber" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinancialInstitutionFilings">
+      <EntityTypeMapping TypeName="FinCENContextModel.FinancialInstitutionFiling">
+        <MappingFragment StoreEntitySet="FinancialInstitutionFiling">
+          <ScalarProperty Name="FinancialInstitutionFilingID" ColumnName="FinancialInstitutionFilingID" />
+          <ScalarProperty Name="FinancialInstitutionID" ColumnName="FinancialInstitutionID" />
+          <ScalarProperty Name="FilingInstitutionFiling_FilingInstitutionFilingID" ColumnName="FilingInstitutionFiling_FilingInstitutionFilingID" />
+          <ScalarProperty Name="InternalControlNumber" ColumnName="InternalControlNumber" />
+          <ScalarProperty Name="LossToInstitution" ColumnName="LossToInstitution" />
+          <ScalarProperty Name="NoBranchActivity" ColumnName="NoBranchActivity" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinCENFiles">
+      <EntityTypeMapping TypeName="FinCENContextModel.FinCENFile">
+        <MappingFragment StoreEntitySet="FinCENFile">
+          <ScalarProperty Name="FinCENFileID" ColumnName="FinCENFileID" />
+          <ScalarProperty Name="TransmitterID" ColumnName="TransmitterID" />
+          <ScalarProperty Name="CoverageStartDate" ColumnName="CoverageStartDate" />
+          <ScalarProperty Name="CoverageEndDate" ColumnName="CoverageEndDate" />
+          <ScalarProperty Name="TransmitterControlCode" ColumnName="TransmitterControlCode" />
+          <ScalarProperty Name="BatchSequenceNumber" ColumnName="BatchSequenceNumber" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IPAddresses">
+      <EntityTypeMapping TypeName="FinCENContextModel.IPAddress">
+        <MappingFragment StoreEntitySet="IPAddress">
+          <ScalarProperty Name="IPAddressID" ColumnName="IPAddressID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="IPAddress1" ColumnName="IPAddress" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NAICSCodes">
+      <EntityTypeMapping TypeName="FinCENContextModel.NAICSCode">
+        <MappingFragment StoreEntitySet="NAICSCode">
+          <ScalarProperty Name="NAICSCodeID" ColumnName="NAICSCodeID" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NarrativeDescriptions">
+      <EntityTypeMapping TypeName="FinCENContextModel.NarrativeDescription">
+        <MappingFragment StoreEntitySet="NarrativeDescription">
+          <ScalarProperty Name="NarrativeDescriptionID" ColumnName="NarrativeDescriptionID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="NarrativeText" ColumnName="NarrativeText" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostalCodes">
+      <EntityTypeMapping TypeName="FinCENContextModel.PostalCode">
+        <MappingFragment StoreEntitySet="PostalCode">
+          <ScalarProperty Name="PostalCodeID" ColumnName="PostalCodeID" />
+          <ScalarProperty Name="PostalCodeValue" ColumnName="PostalCodeValue" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="AreaCode" ColumnName="AreaCode" />
+          <ScalarProperty Name="CityAliasAbbreviation" ColumnName="CityAliasAbbreviation" />
+          <ScalarProperty Name="CityAliasName" ColumnName="CityAliasName" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="CountyFIPS" ColumnName="CountyFIPS" />
+          <ScalarProperty Name="PreferredLastLineKey" ColumnName="PreferredLastLineKey" />
+          <ScalarProperty Name="StateFIPS" ColumnName="StateFIPS" />
+          <ScalarProperty Name="CityStateKey" ColumnName="CityStateKey" />
+          <ScalarProperty Name="CityAliasCode" ColumnName="CityAliasCode" />
+          <ScalarProperty Name="CityMixedCase" ColumnName="CityMixedCase" />
+          <ScalarProperty Name="CityAliasMixedCase" ColumnName="CityAliasMixedCase" />
+          <ScalarProperty Name="StateANSI" ColumnName="StateANSI" />
+          <ScalarProperty Name="CountyANSI" ColumnName="CountyANSI" />
+          <ScalarProperty Name="FacilityCode" ColumnName="FacilityCode" />
+          <ScalarProperty Name="CityDeliveryIndicator" ColumnName="CityDeliveryIndicator" />
+          <ScalarProperty Name="CarrierRouteRateSortation" ColumnName="CarrierRouteRateSortation" />
+          <ScalarProperty Name="FinanceNumber" ColumnName="FinanceNumber" />
+          <ScalarProperty Name="UniqueZIPName" ColumnName="UniqueZIPName" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductDescriptions">
+      <EntityTypeMapping TypeName="FinCENContextModel.ProductDescription">
+        <MappingFragment StoreEntitySet="ProductDescription">
+          <ScalarProperty Name="ProductDescriptionID" ColumnName="ProductDescriptionID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecordChangeEntries">
+      <EntityTypeMapping TypeName="FinCENContextModel.RecordChangeEntry">
+        <MappingFragment StoreEntitySet="RecordChangeEntries">
+          <ScalarProperty Name="RecordChangeEntryID" ColumnName="RecordChangeEntryID" />
+          <ScalarProperty Name="RevisionHistorieID" ColumnName="RevisionHistorieID" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RevisionHistories">
+      <EntityTypeMapping TypeName="FinCENContextModel.RevisionHistory">
+        <MappingFragment StoreEntitySet="RevisionHistories">
+          <ScalarProperty Name="RevisionHistorieID" ColumnName="RevisionHistorieID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ChangeType" ColumnName="ChangeType" />
+          <ScalarProperty Name="EventDateTime" ColumnName="EventDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SARSubjects">
+      <EntityTypeMapping TypeName="FinCENContextModel.SARSubject">
+        <MappingFragment StoreEntitySet="SARSubject">
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="IsEntity" ColumnName="IsEntity" />
+          <ScalarProperty Name="AllCriticalInfoMissing" ColumnName="AllCriticalInfoMissing" />
+          <ScalarProperty Name="SubjectLastName" ColumnName="SubjectLastName" />
+          <ScalarProperty Name="SubjectFirstName" ColumnName="SubjectFirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CorroborativeStatementToFiler" ColumnName="CorroborativeStatementToFiler" />
+          <ScalarProperty Name="NoKnownAccountInvolved" ColumnName="NoKnownAccountInvolved" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="TINType" ColumnName="TINType" />
+          <ScalarProperty Name="SubjectRole" ColumnName="SubjectRole" />
+          <ScalarProperty Name="NAICSCodeID" ColumnName="NAICSCodeID" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StateCodes">
+      <EntityTypeMapping TypeName="FinCENContextModel.StateCode">
+        <MappingFragment StoreEntitySet="StateCode">
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="ISOCode" ColumnName="ISOCode" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectAddresses">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectAddress">
+        <MappingFragment StoreEntitySet="SubjectAddress">
+          <ScalarProperty Name="SubjectAddressID" ColumnName="SubjectAddressID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="PostalCodeID" ColumnName="PostalCodeID" />
+          <ScalarProperty Name="CountryCodeID" ColumnName="CountryCodeID" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectAlternateNames">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectAlternateName">
+        <MappingFragment StoreEntitySet="SubjectAlternateName">
+          <ScalarProperty Name="SubjectAlternateNameID" ColumnName="SubjectAlternateNameID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="AlternateName" ColumnName="AlternateName" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectEmails">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectEmail">
+        <MappingFragment StoreEntitySet="SubjectEmail">
+          <ScalarProperty Name="SubjectEmailID" ColumnName="SubjectEmailID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectIdentifications">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectIdentification">
+        <MappingFragment StoreEntitySet="SubjectIdentification">
+          <ScalarProperty Name="SubjectIdentificationID" ColumnName="SubjectIdentificationID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="IdentificationNumber" ColumnName="IdentificationNumber" />
+          <ScalarProperty Name="IssuingStateCodeID" ColumnName="IssuingStateCodeID" />
+          <ScalarProperty Name="IssuingCountryCodeID" ColumnName="IssuingCountryCodeID" />
+          <ScalarProperty Name="IdentificationTypeOther" ColumnName="IdentificationTypeOther" />
+          <ScalarProperty Name="IdentificationType" ColumnName="IdentificationType" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectRelationships">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectRelationship">
+        <MappingFragment StoreEntitySet="SubjectRelationship">
+          <ScalarProperty Name="SubjectRelationshipID" ColumnName="SubjectRelationshipID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="RelatedInstitutionTIN" ColumnName="RelatedInstitutionTIN" />
+          <ScalarProperty Name="SubjectRelationshipOther" ColumnName="SubjectRelationshipOther" />
+          <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          <ScalarProperty Name="SubjectRelationshipTypes" ColumnName="SubjectRelationshipTypes" />
+          <ScalarProperty Name="RelationshipStatusType" ColumnName="RelationshipStatusType" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectTelephones">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectTelephone">
+        <MappingFragment StoreEntitySet="SubjectTelephone">
+          <ScalarProperty Name="SubjectTelephoneID" ColumnName="SubjectTelephoneID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="PhoneType" ColumnName="PhoneType" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubjectWebsites">
+      <EntityTypeMapping TypeName="FinCENContextModel.SubjectWebsite">
+        <MappingFragment StoreEntitySet="SubjectWebsite">
+          <ScalarProperty Name="SubjectWebsiteID" ColumnName="SubjectWebsiteID" />
+          <ScalarProperty Name="SARSubjectID" ColumnName="SARSubjectID" />
+          <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuspiciousActivities">
+      <EntityTypeMapping TypeName="FinCENContextModel.SuspiciousActivity">
+        <MappingFragment StoreEntitySet="SuspiciousActivity">
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="TransactionSequenceNumber" ColumnName="TransactionSequenceNumber" />
+          <ScalarProperty Name="IsContinuingActivity" ColumnName="IsContinuingActivity" />
+          <ScalarProperty Name="IsJointReport" ColumnName="IsJointReport" />
+          <ScalarProperty Name="PriorReportID" ColumnName="PriorReportID" />
+          <ScalarProperty Name="AmountInvolved" ColumnName="AmountInvolved" />
+          <ScalarProperty Name="IsAmountUnknown" ColumnName="IsAmountUnknown" />
+          <ScalarProperty Name="ActivityStartDate" ColumnName="ActivityStartDate" />
+          <ScalarProperty Name="ActivityEndDate" ColumnName="ActivityEndDate" />
+          <ScalarProperty Name="CumulativeAmount" ColumnName="CumulativeAmount" />
+          <ScalarProperty Name="StructuringOtherDescription" ColumnName="StructuringOtherDescription" />
+          <ScalarProperty Name="TerroristFinancingOtherDescription" ColumnName="TerroristFinancingOtherDescription" />
+          <ScalarProperty Name="FraudOtherDescription" ColumnName="FraudOtherDescription" />
+          <ScalarProperty Name="CasinoActivityOtherDescription" ColumnName="CasinoActivityOtherDescription" />
+          <ScalarProperty Name="MoneyLaunderingOtherDescription" ColumnName="MoneyLaunderingOtherDescription" />
+          <ScalarProperty Name="SuspiciousIdentificationOther" ColumnName="SuspiciousIdentificationOther" />
+          <ScalarProperty Name="UncategorizedSuspiciousActivityOther" ColumnName="UncategorizedSuspiciousActivityOther" />
+          <ScalarProperty Name="InsuranceActivityOther" ColumnName="InsuranceActivityOther" />
+          <ScalarProperty Name="SecuritiesActivityOther" ColumnName="SecuritiesActivityOther" />
+          <ScalarProperty Name="MortageFraudOther" ColumnName="MortageFraudOther" />
+          <ScalarProperty Name="ProductTypeOther" ColumnName="ProductTypeOther" />
+          <ScalarProperty Name="InstrumentTypeOther" ColumnName="InstrumentTypeOther" />
+          <ScalarProperty Name="LEContactAgency" ColumnName="LEContactAgency" />
+          <ScalarProperty Name="LEContactName" ColumnName="LEContactName" />
+          <ScalarProperty Name="LEContactTelephone" ColumnName="LEContactTelephone" />
+          <ScalarProperty Name="LEContactExtension" ColumnName="LEContactExtension" />
+          <ScalarProperty Name="LEContactDate" ColumnName="LEContactDate" />
+          <ScalarProperty Name="FilingInstitutionContactOffice" ColumnName="FilingInstitutionContactOffice" />
+          <ScalarProperty Name="FilingInstitutionPhoneNumber" ColumnName="FilingInstitutionPhoneNumber" />
+          <ScalarProperty Name="FilingInstitutionExtension" ColumnName="FilingInstitutionExtension" />
+          <ScalarProperty Name="DateFiled" ColumnName="DateFiled" />
+          <ScalarProperty Name="FilingType" ColumnName="FilingType" />
+          <ScalarProperty Name="StructuringTypes" ColumnName="StructuringTypes" />
+          <ScalarProperty Name="TerroristFinancingTypes" ColumnName="TerroristFinancingTypes" />
+          <ScalarProperty Name="FraudTypes" ColumnName="FraudTypes" />
+          <ScalarProperty Name="CasinoActivityTypes" ColumnName="CasinoActivityTypes" />
+          <ScalarProperty Name="MoneyLaunderingTypes" ColumnName="MoneyLaunderingTypes" />
+          <ScalarProperty Name="SuspiciousIdentificationTypes" ColumnName="SuspiciousIdentificationTypes" />
+          <ScalarProperty Name="UncategorizedSuspiciousActivityTypes" ColumnName="UncategorizedSuspiciousActivityTypes" />
+          <ScalarProperty Name="InsuranceActivityTypes" ColumnName="InsuranceActivityTypes" />
+          <ScalarProperty Name="SecuritiesActivityTypes" ColumnName="SecuritiesActivityTypes" />
+          <ScalarProperty Name="MortageFraudTypes" ColumnName="MortageFraudTypes" />
+          <ScalarProperty Name="ProductTypes" ColumnName="ProductTypes" />
+          <ScalarProperty Name="InstrumentTypes" ColumnName="InstrumentTypes" />
+          <ScalarProperty Name="BSAID" ColumnName="BSAID" />
+          <ScalarProperty Name="Survey_WUTransactionApproved" ColumnName="Survey_WUTransactionApproved" />
+          <ScalarProperty Name="Survey_WUHoldOnFunds" ColumnName="Survey_WUHoldOnFunds" />
+          <ScalarProperty Name="Survey_MultipleTransactionsInSameDay" ColumnName="Survey_MultipleTransactionsInSameDay" />
+          <ScalarProperty Name="Survey_MultipleTransactionsInSameDay_Amounts" ColumnName="Survey_MultipleTransactionsInSameDay_Amounts" />
+          <ScalarProperty Name="Survey_MultipleTransactionConsecutiveDays" ColumnName="Survey_MultipleTransactionConsecutiveDays" />
+          <ScalarProperty Name="Survey_MultipleTransactionConsecutiveDays_Amounts" ColumnName="Survey_MultipleTransactionConsecutiveDays_Amounts" />
+          <ScalarProperty Name="Survey_TransactionExplaination" ColumnName="Survey_TransactionExplaination" />
+          <ScalarProperty Name="Survey_TransactionExplainationDescription" ColumnName="Survey_TransactionExplainationDescription" />
+          <ScalarProperty Name="Survey_CustomerDirectedByThirdParty" ColumnName="Survey_CustomerDirectedByThirdParty" />
+          <ScalarProperty Name="Survey_CustomerDirectedByThirdPartyDescription" ColumnName="Survey_CustomerDirectedByThirdPartyDescription" />
+          <ScalarProperty Name="Survey_SendsObtainedPhotoID" ColumnName="Survey_SendsObtainedPhotoID" />
+          <ScalarProperty Name="Survey_SendsObtainedIdentityInformation" ColumnName="Survey_SendsObtainedIdentityInformation" />
+          <ScalarProperty Name="Survey_ReceivesObtainedPhotoID" ColumnName="Survey_ReceivesObtainedPhotoID" />
+          <ScalarProperty Name="Survey_ReceivesObtainedIdentityInformation" ColumnName="Survey_ReceivesObtainedIdentityInformation" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TradingMarkets">
+      <EntityTypeMapping TypeName="FinCENContextModel.TradingMarket">
+        <MappingFragment StoreEntitySet="TradingMarket">
+          <ScalarProperty Name="TradingMarketID" ColumnName="TradingMarketID" />
+          <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivityID" />
+          <ScalarProperty Name="MarketCode" ColumnName="MarketCode" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transmitters">
+      <EntityTypeMapping TypeName="FinCENContextModel.Transmitter">
+        <MappingFragment StoreEntitySet="Transmitter">
+          <ScalarProperty Name="TransmitterID" ColumnName="TransmitterID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="TransmitterTIN" ColumnName="TransmitterTIN" />
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="PostalCodeID" ColumnName="PostalCodeID" />
+          <ScalarProperty Name="CountryCodeID" ColumnName="CountryCodeID" />
+          <ScalarProperty Name="LastChangeDateTime" ColumnName="LastChangeDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FinancialInstitutionFilingSuspiciousActivities" TypeName="FinCENContextModel.FinancialInstitutionFilingSuspiciousActivities" StoreEntitySet="FinancialInstitutionFilingSuspiciousActivities">
+      <EndProperty Name="FinancialInstitutionFiling">
+        <ScalarProperty Name="FinancialInstitutionFilingID" ColumnName="FinancialInstitutionFiling_FinancialInstitutionFilingID" />
+      </EndProperty>
+      <EndProperty Name="SuspiciousActivity">
+        <ScalarProperty Name="SuspiciousActivityID" ColumnName="SuspiciousActivity_SuspiciousActivityID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
